@@ -34,6 +34,7 @@ const getWeather = async (req: Request, res: Response) => {
         message: "Success (from cache)",
         data: JSON.parse(cached),
       });
+      return;
     }
 
     console.log("🌐 Cache miss – fetching from API");
